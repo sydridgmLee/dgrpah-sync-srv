@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package go.micro.srv.dgraph_sync.user;
+
+service User {
+    rpc Create(Request) returns (Response) {}
+    rpc Get(Request) returns (Response) {}
+    rpc Delete(Request) returns (Response) {}
+    rpc Update(Request) returns (Response) {}
+}
+
+message Request {
+    string name = 1;
+    string email = 2;
+}
+
+message Response {
+	string msg = 1;
+}
